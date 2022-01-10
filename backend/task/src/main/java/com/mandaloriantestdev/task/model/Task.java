@@ -4,9 +4,16 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.redis.core.index.Indexed;
+
 
 
 public class Task {
+	
+	@Id
+	@Indexed
+	String id;
 	
 	@NotBlank
 	@Size(min = 10)
@@ -19,6 +26,14 @@ public class Task {
 
 	public void setTaskName(String taskName) {
 		this.taskName = taskName;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 
