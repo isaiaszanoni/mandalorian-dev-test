@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+    <div class="row">
+        <h1 class="ms-3">Add Task Form</h1>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-center flex-wrap">
+            <div class="card bg-dark text-light col-12 col-sm-12 col-md-8 col-lg-8 col-xl-7">
+                <div class="card-header bg-dark">
+                    <h5 class="card-title"></h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-group d-flex flex-column">
+
+                        <label for="title">*Task Title (id):</label>
+                        <input [(ngModel)]="task.id" type="text" name="title" id="title" class="w-100 rounded input-modal mb-3" >
+
+                        <label for="text">*Task description:</label>
+                        <textarea [(ngModel)]="task.taskName" type="text" name="text" id="text" class="w-100 rounded input-modal mb-3"></textarea>
+
+                        <p class="text-muted">*The Task Description field does not accept numbers or special characters, just letters majuscules or minuscules.</p>
+                    </div>
+                </div>
+                <div class="card-footer bg-dark">
+                    <button (click)='addTask()' type="button" class="btn btn-primary m-auto" data-bs-dismiss="modal">Add Task</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
