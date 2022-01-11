@@ -1,10 +1,10 @@
-package com.mandaloriantestdev.task.repository;
+package com.mandaloriantestdev.task.service;
 
 import java.util.List;
 
 import com.mandaloriantestdev.task.model.Task;
 
-public interface TaskRepository {
+public interface TaskService {
 
 	boolean saveTask(Task task);
 
